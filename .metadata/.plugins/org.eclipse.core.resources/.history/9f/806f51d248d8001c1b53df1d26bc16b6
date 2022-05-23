@@ -1,0 +1,19 @@
+package controller;
+
+import java.util.Scanner;
+
+import service.StudentService;
+
+public class DeleteStudentController implements Controller {
+
+	@Override
+	public void execute(Scanner sc) {
+		System.out.println("학생정보를 삭제합니다.....");
+		System.out.print("삭제할 학생의 학번 : ");
+		String sno = sc.next();
+		
+		StudentService.getInstance().deleteStudent(sno);
+		
+	}
+
+}

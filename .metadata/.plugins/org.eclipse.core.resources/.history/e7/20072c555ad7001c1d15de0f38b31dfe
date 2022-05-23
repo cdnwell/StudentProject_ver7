@@ -1,0 +1,11 @@
+package dao;
+
+import config.DBManager;
+
+public class StudentDAO {
+	private static StudentDAO instance = new StudentDAO();
+	private DBManager manager;
+	private StudentDAO() {
+		manager = DBManager.getInstance();
+	}
+}

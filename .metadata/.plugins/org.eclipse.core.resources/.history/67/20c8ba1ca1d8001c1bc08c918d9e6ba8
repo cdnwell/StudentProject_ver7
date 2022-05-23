@@ -1,0 +1,15 @@
+package handler;
+
+import java.util.Scanner;
+
+import controller.Controller;
+
+public class searchStudentController implements Controller {
+
+	@Override
+	public void execute(Scanner sc) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

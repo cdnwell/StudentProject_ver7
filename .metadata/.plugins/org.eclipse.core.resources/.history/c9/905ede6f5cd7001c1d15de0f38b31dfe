@@ -1,0 +1,13 @@
+package controller;
+
+import java.util.Scanner;
+
+public class PrintAllStudentController implements Controller {
+
+	@Override
+	public void execute(Scanner sc) {
+		
+		
+	}
+
+}

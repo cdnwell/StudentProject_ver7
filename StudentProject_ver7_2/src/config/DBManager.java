@@ -1,0 +1,55 @@
+package config;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+/*
+ * statement는 기능에서 실행하는 부분만 만들어준다.
+ * connection만 만들어준다.
+ * statement는 계속 바뀌기 때문
+ */
+public class DBManager {
+	private static DBManager instance = new DBManager();
+	private Connection conn;
+
+	private DBManager() {
+		
+		try {
+			// 드라이버 로딩
+			Class.forName(DBConfig.DB_DRIVER);
+			// DB 접속
+			conn = DriverManager.getConnection(DBConfig.DB_URL, DBConfig.DB_USER, DBConfig.DB_PASSWD);
+			conn.setAutoCommit(false);
+			
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void close(PreparedStatement stmt, ResultSet rs) {
+		try {
+			if(rs != null) rs.close();
+			if(stmt != null) stmt.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public Connection getConn() {
+		return conn;
+	}
+
+	public static DBManager getInstance() {
+		if (instance == null)
+			instance = new DBManager();
+
+		return instance;
+	}
+
+}

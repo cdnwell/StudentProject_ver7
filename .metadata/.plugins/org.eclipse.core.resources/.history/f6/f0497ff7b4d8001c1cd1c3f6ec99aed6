@@ -1,0 +1,13 @@
+package handler;
+
+import java.util.Scanner;
+
+public class SelectTopStudentController implements Controller {
+
+	@Override
+	public void execute(Scanner sc) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
