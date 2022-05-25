@@ -2,10 +2,13 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="config.DBManager"/>
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
     <fullyQualifiedTypeName name="config.DBConfig"/>
-    <fullyQualifiedTypeName name="config.DBManager"/>
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
-    <fullyQualifiedTypeName name="exception.StudentException"/>
+    <fullyQualifiedTypeName name="controller.HandlerMapping"/>
+    <fullyQualifiedTypeName name="controller.Controller"/>
     <fullyQualifiedTypeName name="service.StudentService"/>
+    <fullyQualifiedTypeName name="vo.StudentVO"/>
+    <fullyQualifiedTypeName name="exception.StudentException"/>
 </qualifiedTypeNameHistroy>
