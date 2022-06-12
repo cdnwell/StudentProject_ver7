@@ -40,7 +40,6 @@ public class StudentDAO {
 			pstmt.setString(1, sno);
 			rs = pstmt.executeQuery();
 			
-			
 			if (rs.next()) {
 				String sname = rs.getString(2);
 				int majorNo = rs.getInt(3);
@@ -77,7 +76,13 @@ public class StudentDAO {
 				int majorNo = rs.getInt(3);
 				String majorName = rs.getString(4);
 				double score = rs.getDouble(5);
-				list.add(new StudentVO(sno,sname,majorNo,majorName,score));
+				StudentVO vo = new StudentVO();
+				vo.setMajorName(majorName);
+				vo.setMajorNo(majorNo);
+				vo.setSno(sno);
+				vo.setSname(sname);
+				vo.setScore(score);
+				list.add(vo);
 			}
 			
 		}catch(SQLException e) {

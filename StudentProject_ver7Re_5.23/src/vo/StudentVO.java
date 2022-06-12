@@ -16,6 +16,9 @@ public class StudentVO {
 		this.score = score;
 	}
 	
+	public StudentVO() {
+	}
+
 	@Override
 	public String toString() {
 		return sno + " " + sname + " " + majorNo + " " + majorName
